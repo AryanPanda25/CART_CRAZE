@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
 const path = require("path");
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 const errorMiddleware = require("./middleware/error");
 
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
+app.use(cors());
 
 // Route Imports
 const product = require("./routes/productRoute");
