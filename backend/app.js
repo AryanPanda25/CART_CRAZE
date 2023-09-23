@@ -17,7 +17,9 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 app.use(cors({
-    origin: '*'
+    origin: ["*"],
+    methods:["POST","GET","PUT","DELETE"],
+    credentials: true
 }));
 
 // Route Imports
