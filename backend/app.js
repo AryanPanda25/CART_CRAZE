@@ -16,7 +16,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 
 // Route Imports
 const product = require("./routes/productRoute");
