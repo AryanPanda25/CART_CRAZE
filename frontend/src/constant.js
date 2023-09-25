@@ -1,1 +1,1 @@
-export const API = "https://cart-craze-api.vercel.app";
+export const API = "https://cartcraze-api.onrender.com";
