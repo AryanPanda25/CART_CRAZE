@@ -4,11 +4,11 @@ import {
   SAVE_SHIPPING_INFO,
 } from "../constants/cartConstants";
 import axios from "axios";
-axios.defaults.withCredentials =true
+import {API} from "../constant"
 
 // Add to Cart
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
-  const { data } = await axios.get(`https://cart-craze-api.vercel.app/api/v1/product/${id}`);
+  const { data } = await axios.get(`${API}/api/v1/product/${id}`);
 
   dispatch({
     type: ADD_TO_CART,

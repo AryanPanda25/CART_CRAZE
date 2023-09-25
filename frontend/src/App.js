@@ -42,7 +42,7 @@ import ProductReviews from "./component/Admin/ProductReviews";
 import Contact from "./component/layout/Contact/Contact";
 import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
-axios.defaults.withCredentials =true
+import {API} from "./constant"
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -50,7 +50,7 @@ function App() {
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   async function getStripeApiKey() {
-    const { data } = await axios.get("https://cart-craze-api.vercel.app/api/v1/stripeapikey");
+    const { data } = await axios.get(`${API}/api/v1/stripeapikey`);
 
     setStripeApiKey(data.stripeApiKey);
   }

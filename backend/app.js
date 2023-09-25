@@ -22,7 +22,8 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 app.use(cors({
-    origin: "https://cart-craze.vercel.app"
+    origin: "https://cart-craze.vercel.app",
+    credentials:true
 }));
 
 // Route Imports
