@@ -21,10 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
-app.use(cors({
-    origin: "https://cart-craze.vercel.app",
-    credentials:true
-}));
+app.use(cors());
 
 // Route Imports
 const product = require("./routes/productRoute");
